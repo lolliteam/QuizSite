@@ -16,11 +16,7 @@
 	async function getQuiz(){
 		const res = await fetch('https://opentdb.com/api.php?amount=4')
 		const quiz = await res.json();
-
-        console.log(quiz);
-
         return quiz
-
 	}
 
     function nextQuestion(){
