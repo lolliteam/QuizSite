@@ -3,8 +3,9 @@
     import Question from "./Question.svelte"
     import Modal from "./Modal.svelte"
     import { onMount} from 'svelte'
-    import {score, startQuiz} from './store.js'
+    import {score, startQuiz } from './store.js'
     import Information from "./Information.svelte"
+    import FakeTable from "./FakeTable.svelte";
 
     let activeQuestion = 0;
     let isModalOpen = false;
@@ -15,7 +16,10 @@
 	async function getQuiz(){
 		const res = await fetch('https://opentdb.com/api.php?amount=4')
 		const quiz = await res.json();
-		return quiz
+
+        console.log(quiz);
+
+        return quiz
 
 	}
 
@@ -68,15 +72,13 @@
         {#await quiz}
             loading...
         {:then data}
-
-        {#each data.results as question, index}
-        {#if index == activeQuestion}
-            <div transition:blur={{amount:5}} class="fade-wrapper">
-                <Question {nextQuestion} {question}/>
-            </div>
-        {/if}
-            
-        {/each}
+            {#each data.results as question, index}
+                {#if index == activeQuestion}
+                    <div transition:blur={{amount:10}} class="fade-wrapper">
+                        <Question {nextQuestion} {question}/>
+                    </div>
+                {/if}  
+            {/each}
         {/await}
     {/if}
 
@@ -88,3 +90,5 @@
     <button on:click={resetQuiz}>Start Over</button>
 </Modal>
 {/if}
+
+<FakeTable />

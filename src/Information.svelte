@@ -1,5 +1,5 @@
 <script>
-    import { startQuiz }  from './store.js'
+    import { startQuiz, fname, lname, email }  from './store.js'
 
     function validate() {
         startQuiz.update((val)=> true);
@@ -67,17 +67,17 @@
 <div class="container">
     <div class="app-form">
         <div class="app-form-group">
-            <input class="app-form-control" type="text" placeholder="First Name" required>
+            <input class="app-form-control" bind:value={$fname} type="text" placeholder="First Name" required>
         </div>
         <div class="app-form-group">
-            <input class="app-form-control" type="text" placeholder="Last Name" required>
+            <input class="app-form-control" bind:value={$lname} type="text" placeholder="Last Name" required>
         </div>
         <div class="app-form-group">
-            <input class="app-form-control" type="email" placeholder="Email" required>
+            <input class="app-form-control" bind:value={$email} type="email" placeholder="Email" required>
         </div>
         <div class="app-form-group buttons">
             <button class="app-form-button" on:click={validate}>Start Quiz</button>
-          </div>
+        </div>
     </div>
 </div>
   
