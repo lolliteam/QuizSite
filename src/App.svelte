@@ -48,7 +48,7 @@
 <Router {url}>
 	<nav>
 		<Link to="/">
-			<img id="quiz" class="cardActive" on:click={() => flipIt(event)} alt="Quiz" data-src="https://www.clker.com/cliparts/j/i/d/Z/7/l/quiz-2-hi.png" src="http://www.clipartbest.com/cliparts/eiM/yMg/eiMyMg9aT.png" />
+			<img id="quiz" class="cardActive" on:click={() => flipIt(event)} alt="Quiz" data-src="https://www.clker.com/cliparts/j/i/d/Z/7/l/quiz-2-hi.png" src="https://sweetclipart.com/multisite/sweetclipart/files/check_mark_green.png" />
 			<label for="quiz">Quiz</label>
 		</Link>
 		<Link to="/cart">
