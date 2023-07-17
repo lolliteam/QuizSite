@@ -15,7 +15,7 @@
 			e.target.removeAttribute("class");
 		} else {
 			e.target.setAttribute("class", "cardActive")
-			e.target.setAttribute("src", "https://www.clipartbest.com/cliparts/eiM/yMg/eiMyMg9aT.png")
+			e.target.setAttribute("src", "https://sweetclipart.com/multisite/sweetclipart/files/check_mark_green.png")
 		}
 	}
 
