@@ -21,6 +21,6 @@
     <label for="result">Result:</label>
     <input type="text" id="result" name="result" value={(($score * 100) >= 200) ? (($score * 100) == 400) ? 'Student' : 'Hedonist' : 'Adventurer'}>
     
-    <input type="submit" value="Submit">
+    <input type="submit" id="submitForm" value="Submit">
 
 </form>

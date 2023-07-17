@@ -30,18 +30,24 @@
         isModalOpen = false;
     }
 
+    function forceSubmit() {
+        document.querySelector('#submitForm').click();
+    }
+
     $: actualNumber = activeQuestion +1;
 
     $: if ($score >= 3 && actualNumber > 4){
         isModalOpen = true;
         result = "You Won!"
         resultMsg = "Congratulation"
+        forceSubmit();
     }
 
     $: if ($score < 3 && actualNumber > 4){
         isModalOpen = true;
         result = "You Lost!"
         resultMsg = "Better luck next time"
+        forceSubmit();
     }
 
     $: if (activeQuestion > 4){
