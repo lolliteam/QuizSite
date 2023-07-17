@@ -1,5 +1,5 @@
 <script>
-    import { score } from './store.js'
+    import { score } from '../store.js'
     let isCorrect = false;
     let isAnswered = false;
 

@@ -1,5 +1,5 @@
 <script>
-    import { score, fname, lname, email }  from './store.js'
+    import { score, fname, lname, email }  from '../store.js'
 </script>
 
 <style>

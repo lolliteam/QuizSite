@@ -1,5 +1,5 @@
 <script>
-    import { startQuiz, fname, lname, email }  from './store.js'
+    import { startQuiz, fname, lname, email }  from '../store.js'
 
     function validate() {
         startQuiz.update((val)=> true);

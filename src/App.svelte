@@ -1,13 +1,63 @@
 <script>
+	import { Router, Link, Route } from "svelte-routing";
 	import Quiz from "./Quiz.svelte"
+	import Cart from "./Cart.svelte"
+
+	export let url = "/";
+
+	function flipIt(e) {
+		document.querySelectorAll('nav > a > img').forEach(element => {
+			element.removeAttribute("class");
+			element.setAttribute("src", element.getAttribute("data-src"))
+		});
+
+		if (e.target.getAttribute("class") == "cardActive") {
+			e.target.removeAttribute("class");
+		} else {
+			e.target.setAttribute("class", "cardActive")
+			e.target.setAttribute("src", "http://www.clipartbest.com/cliparts/eiM/yMg/eiMyMg9aT.png")
+		}
+	}
 
 </script>
 <style>
+	:global(nav > a > img) {
+		width: 110px;
+		transform: rotateY(180deg);
+		transition: transform 0.4s;
+		transform-style: preserve-3d;
+	}
+
+	:global(nav > a) {
+			display: inline-block;
+			text-align: center;
+			border: solid 1px black;
+			padding: 1rem;
+		}
+
+	:global(.cardActive) {
+		transform: rotateY(0);
+		min-height: 110px;
+	}
+
 
 </style>
 
-<div>
-	<h1>Triglav Test Quiz</h1>
-	<Quiz />
 
-</div>
+
+<Router {url}>
+	<nav>
+		<Link to="/">
+			<img id="quiz" class="cardActive" on:click={() => flipIt(event)} alt="Quiz" data-src="https://www.clker.com/cliparts/j/i/d/Z/7/l/quiz-2-hi.png" src="http://www.clipartbest.com/cliparts/eiM/yMg/eiMyMg9aT.png" />
+			<label for="quiz">Quiz</label>
+		</Link>
+		<Link to="/cart">
+			<img id="cart" on:click={() => flipIt(event)} alt="Cart" data-src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532323sy0um.png" src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532323sy0um.png" />
+			<label for="cart">Cart</label>
+		</Link>
+	</nav>
+	<div>
+		<Route path="/cart" component={Cart} />
+		<Route path="/"><Quiz /></Route>
+	</div>
+</Router>

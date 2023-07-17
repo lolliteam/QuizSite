@@ -1,11 +1,11 @@
 <script>
     import {blur} from "svelte/transition";
-    import Question from "./Question.svelte"
+    import Question from "./Quiz/Question.svelte"
     import Modal from "./Modal.svelte"
     import { onMount} from 'svelte'
     import {score, startQuiz } from './store.js'
-    import Information from "./Information.svelte"
-    import FakeTable from "./FakeTable.svelte";
+    import Information from "./Quiz/Information.svelte"
+    import FakeTable from "./Quiz/FakeTable.svelte";
 
     let activeQuestion = 0;
     let isModalOpen = false;
@@ -60,6 +60,8 @@
         position: absolute;
     }
 </style>
+
+<h1>Triglav Test Quiz</h1>
 
 <div>
     {#if !$startQuiz}
