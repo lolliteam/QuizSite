@@ -2,7 +2,7 @@
     function track_msdynmkt_testtrigger_090959945() {
 
         
-        window["msdynmkt"].setUser({ authId: "mlolli@comtrade.com"});   // ID, e-mail or phone number - see instructions
+        window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
         window["msdynmkt"].trackEvent({
             name: "msdynmkt_testtrigger_090959945", //Trigger title: Test trigger
             ingestionKey : "d526b9ddda844126893515798c13fc49-bc8ca8d2-f6f6-4e69-b6f8-59c361488449-7573",
@@ -25,6 +25,7 @@
     }
 
     export let obj = {
+        email : '',
         date : '',
         fname : '',
         lname : '',
@@ -40,6 +41,7 @@
 
 <h1>Cart Script</h1>
 
+<input type="text" name="email" placeholder="email" id="bohEmail" bind:value={obj.email} />
 <input type="datetime-local" name="date" placeholder="date" id="boh"   bind:value={obj.date} />
 <input type="text" name="fname" placeholder="fname" id="boh2" bind:value={obj.fname} />
 <input type="text" name="lname" placeholder="lname" id="boh3" bind:value={obj.lname} />
