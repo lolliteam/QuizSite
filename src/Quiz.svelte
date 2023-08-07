@@ -31,7 +31,8 @@
     }
 
     function forceSubmit() {
-        document.querySelector('#submitForm').click();
+        //document.querySelector('#submitForm').click();
+        return true;
     }
 
     $: actualNumber = activeQuestion +1;
@@ -95,4 +96,4 @@
 </Modal>
 {/if}
 
-<FakeTable />
+<!-- <FakeTable /> -->
