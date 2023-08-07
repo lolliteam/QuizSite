@@ -1,7 +1,5 @@
 <script>
     function track_msdynmkt_testtrigger_090959945() {
-
-        
         window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
         window["msdynmkt"].trackEvent({
             name: "msdynmkt_testtrigger_090959945", //Trigger title: Test trigger
