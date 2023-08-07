@@ -8,7 +8,7 @@
     }
 </style>
 
-<form id="fakeForm">
+
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname" value={$fname}><br>
     <label for="lname">Last name:</label>
@@ -23,4 +23,3 @@
     
     <input type="submit" id="submitForm" value="Submit">
 
-</form>
