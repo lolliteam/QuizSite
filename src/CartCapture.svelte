@@ -7,30 +7,6 @@
 </style>
 
 <form id="fakeform2">
-    <!-- <label for="productid">Product Id:</label>
-    <input type="number" name="productid" placeholder="productid" id="productid"  />
-
-    <label for="productname">Product name:</label>
-    <input type="text" name="productname" placeholder="productname" id="productname"  />
-    
-    <label for="date">Date:</label>
-    <input type="datetime-local" name="date" placeholder="date" id="date"  />
-    
-    <label for="laststep">Last Step:</label>
-    <input type="text" name="laststep" placeholder="laststep" id="laststep"  />
-    
-    <label for="state">State:</label>
-    <input type="text" name="state" placeholder="state" id="state"  />
-    
-    <label for="totalamount">Total Amount:</label>
-    <input type="text" name="totalamount" placeholder="totalamount" id="totalamount"  />
-    
-    <label for="url">URL:</label>
-    <input type="text" name="url" placeholder="url" id="url"  />
-    
-    <label for="bindingid">Binding ID:</label>
-    <input type="text" name="bindingid" placeholder="bindingid" id="bindingid"  /> -->
-
     <label for="email">Email:</label>
     <input type="text" name="email" placeholder="email" id="email" />
 
