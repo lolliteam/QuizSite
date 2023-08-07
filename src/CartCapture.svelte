@@ -8,37 +8,37 @@
 
 <form id="fakeform2">
     <label for="productid">Product Id:</label>
-    <input type="number" name="productid" placeholder="productid" id="boh5"  />
+    <input type="number" name="productid" placeholder="productid" id="productid"  />
 
     <label for="productname">Product name:</label>
-    <input type="text" name="productname" placeholder="productname" id="boh6"  />
+    <input type="text" name="productname" placeholder="productname" id="productname"  />
     
     <label for="date">Date:</label>
-    <input type="datetime-local" name="date" placeholder="date" id="boh"  />
+    <input type="datetime-local" name="date" placeholder="date" id="date"  />
     
     <label for="laststep">Last Step:</label>
-    <input type="text" name="laststep" placeholder="laststep" id="boh4"  />
+    <input type="text" name="laststep" placeholder="laststep" id="laststep"  />
     
     <label for="state">State:</label>
-    <input type="text" name="state" placeholder="state" id="boh7"  />
+    <input type="text" name="state" placeholder="state" id="state"  />
     
     <label for="totalamount">Total Amount:</label>
-    <input type="text" name="totalamount" placeholder="totalamount" id="boh8"  />
+    <input type="text" name="totalamount" placeholder="totalamount" id="totalamount"  />
     
     <label for="url">URL:</label>
-    <input type="text" name="url" placeholder="url" id="boh9"  />
+    <input type="text" name="url" placeholder="url" id="url"  />
     
     <label for="bindingid">Binding ID:</label>
-    <input type="text" name="bindingid" placeholder="bindingid" id="boh10"  />
+    <input type="text" name="bindingid" placeholder="bindingid" id="bindingid"  />
 
     <label for="email">Email:</label>
-    <input type="text" name="email" placeholder="email" id="bohEmail" />
+    <input type="text" name="email" placeholder="email" id="email" />
 
     <label for="fname">First name:</label>
-    <input type="text" name="fname" on:change={() => document.querySelector('#submitForm2').click() } placeholder="fname" id="boh2"  />
+    <input type="text" name="fname" on:change={() => document.querySelector('#submitForm2').click() } placeholder="fname" id="fname"  />
 
     <label for="lname">Last name:</label>
-    <input type="text" name="lname" placeholder="lname" id="boh3" />
+    <input type="text" name="lname" placeholder="lname" id="lname" />
 
     <input type="submit" id="submitForm2" value="Submit">
 </form>
