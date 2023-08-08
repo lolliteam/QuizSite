@@ -18,8 +18,8 @@
         });
     }
 
-    //window.addEventListener('beforeunload', (event) => {
-    window.addEventListener('unload', (event) => {
+    window.addEventListener('beforeunload', (event) => {
+    //window.addEventListener('unload', (event) => {
     event.preventDefault();
     
     if(obj.email ) track_msdynmkt_testtrigger_090959945(); 
