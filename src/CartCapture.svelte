@@ -12,6 +12,7 @@
     }
 
     function onSubmit(e) {
+        console.log('start on submit')
         setTimeout(() => {
             window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
             window["msdynmkt"].trackEvent({
@@ -32,7 +33,9 @@
                 }
             });
 
-            document.querySelectorAll('input').forEach((e) => { e.value = '' });
+            console.log('On submit')
+
+            //document.querySelectorAll('input').forEach((e) => { e.value = '' });
         },2000)
     }
 
