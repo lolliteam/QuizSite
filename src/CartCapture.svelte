@@ -13,8 +13,8 @@
 
     MsCrmMkt.MsCrmFormLoader
         .on("afterFormSubmit", function(event) {
-            
-            event.preventDefault();
+
+            console.log(event);
 
             console.log(obj)
             window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
