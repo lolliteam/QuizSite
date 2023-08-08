@@ -35,6 +35,7 @@
                     "bindingid" : obj.bindingid
                 }
             });
+            return false;
         })
 
     let obj = {
