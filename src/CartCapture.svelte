@@ -38,9 +38,8 @@
             console.log('On submit')
 
             //document.querySelectorAll('input').forEach((e) => { e.value = '' });
+            return false;
         },2000);
-
-        return false;
     }
 
     let obj = {
