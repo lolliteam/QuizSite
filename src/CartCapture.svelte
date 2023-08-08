@@ -91,7 +91,7 @@
     <input type="submit" id="submitForm2" value="Submit">
 </form>
 
-<form id="fakeform3" on:submit|preventDefault={onSubmit}>
+<form id="fakeform3" on:submit|preventDefault={() => { onSubmit();return false }}>
     <label for="productid">Product Id:</label>
     <input type="number" name="productid" placeholder="productid" id="productid" bind:value={obj.productid} />
 
