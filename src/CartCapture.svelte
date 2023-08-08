@@ -13,29 +13,33 @@
 
     MsCrmMkt.MsCrmFormLoader
         .on("afterFormSubmit", function(event) {
+            console.log(event);
+            setTimeout(() => {
+                console.log(obj)
+                window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
+                window["msdynmkt"].trackEvent({
+                    name: "msdynmkt_testtrigger_090959945", //Trigger title: Test trigger
+                    ingestionKey : "d526b9ddda844126893515798c13fc49-bc8ca8d2-f6f6-4e69-b6f8-59c361488449-7573",
+                    version: "1.0.0" ,
+                    properties: {
+                        "date" : obj.date,
+                        "firstname" : obj.fname,
+                        "lastname" : obj.lname,
+                        "laststep" : obj.laststep,
+                        "productid" : obj.productid,
+                        "productname" : obj.productname,
+                        "state" : obj.state,
+                        "totalamount" : obj.totalamount,
+                        "url" : obj.url,
+                        "bindingid" : obj.bindingid
+                    }
+                });
+                return false;
 
+            } , 2000);
             console.log(event);
 
-            console.log(obj)
-            window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
-            window["msdynmkt"].trackEvent({
-                name: "msdynmkt_testtrigger_090959945", //Trigger title: Test trigger
-                ingestionKey : "d526b9ddda844126893515798c13fc49-bc8ca8d2-f6f6-4e69-b6f8-59c361488449-7573",
-                version: "1.0.0" ,
-                properties: {
-                    "date" : obj.date,
-                    "firstname" : obj.fname,
-                    "lastname" : obj.lname,
-                    "laststep" : obj.laststep,
-                    "productid" : obj.productid,
-                    "productname" : obj.productname,
-                    "state" : obj.state,
-                    "totalamount" : obj.totalamount,
-                    "url" : obj.url,
-                    "bindingid" : obj.bindingid
-                }
-            });
-            return false;
+            
         })
 
     let obj = {
