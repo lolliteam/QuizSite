@@ -14,8 +14,7 @@
     MsCrmMkt.MsCrmFormLoader
         .on("afterFormSubmit", function(event) {
             console.log(event);
-            setTimeout(() => {
-                console.log(obj)
+ 
                 window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
                 window["msdynmkt"].trackEvent({
                     name: "msdynmkt_testtrigger_090959945", //Trigger title: Test trigger
@@ -34,12 +33,9 @@
                         "bindingid" : obj.bindingid
                     }
                 });
-                return false;
 
-            } , 2000);
-            console.log(event);
-
-            
+                console.log(obj)
+                return false;            
         })
 
     let obj = {
