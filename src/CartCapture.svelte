@@ -8,7 +8,8 @@
 
 <script>
     function formSubmit() {
-        document.querySelector('#submitForm3').click();
+        //document.querySelector('#submitForm3').click();
+        MsCrmMkt.MsCrmFormLoader.sendFormCaptureToCrm(document.getElementById('fakeform3'))
     }
 
     MsCrmMkt.MsCrmFormLoader
@@ -16,6 +17,9 @@
             console.log(event);
  
                 window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
+                
+                console.log(obj)
+                
                 window["msdynmkt"].trackEvent({
                     name: "msdynmkt_testtrigger_090959945", //Trigger title: Test trigger
                     ingestionKey : "d526b9ddda844126893515798c13fc49-bc8ca8d2-f6f6-4e69-b6f8-59c361488449-7573",
@@ -34,7 +38,8 @@
                     }
                 });
 
-                console.log(obj)
+
+                document.querySelectorAll('input').forEach((e) => { e.value = '' });
                 return false;            
         })
 
