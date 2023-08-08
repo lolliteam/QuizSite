@@ -13,6 +13,9 @@
 
     MsCrmMkt.MsCrmFormLoader
         .on("afterFormSubmit", function(event) {
+            
+            event.preventDefault();
+
             console.log(obj)
             window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
             window["msdynmkt"].trackEvent({
@@ -86,7 +89,7 @@
     <input type="submit" id="submitForm2" value="Submit">
 </form>
 
-<form id="fakeform3" on:submit={onSubmit} action="#">
+<form id="fakeform3" action="#">
     <label for="productid">Product Id:</label>
     <input type="number" name="productid" placeholder="productid" id="productid" bind:value={obj.productid} />
 
