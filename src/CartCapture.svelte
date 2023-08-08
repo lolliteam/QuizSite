@@ -9,6 +9,7 @@
 <script>
     function formSubmit() {
         document.querySelector('#submitForm3').click();
+        return false;
     }
 
     function onSubmit(e) {
@@ -94,7 +95,7 @@
     <input type="submit" id="submitForm2" value="Submit">
 </form>
 
-<form id="fakeform3" on:submit={onSubmit}>
+<form id="fakeform3" on:submit={onSubmit} action="#">
     <label for="productid">Product Id:</label>
     <input type="number" name="productid" placeholder="productid" id="productid" bind:value={obj.productid} />
 
