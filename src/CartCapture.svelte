@@ -36,7 +36,9 @@
             console.log('On submit')
 
             //document.querySelectorAll('input').forEach((e) => { e.value = '' });
-        },2000)
+        },2000);
+        
+        return false;
     }
 
     let obj = {
@@ -91,7 +93,7 @@
     <input type="submit" id="submitForm2" value="Submit">
 </form>
 
-<form id="fakeform3" on:submit|preventDefault={() => { onSubmit();return false }}>
+<form id="fakeform3" on:submit={onSubmit}>
     <label for="productid">Product Id:</label>
     <input type="number" name="productid" placeholder="productid" id="productid" bind:value={obj.productid} />
 
