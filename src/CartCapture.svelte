@@ -9,13 +9,10 @@
 <script>
     function formSubmit() {
         document.querySelector('#submitForm3').click();
-        return false;
     }
 
-    function onSubmit(e) {
-        console.log('start on submit')
-        
-        setTimeout(() => {
+    MsCrmMkt.MsCrmFormLoader
+        .on("afterFormSubmit", function(event) {
             console.log(obj)
             window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
             window["msdynmkt"].trackEvent({
@@ -35,13 +32,7 @@
                     "bindingid" : obj.bindingid
                 }
             });
-
-            console.log('On submit')
-
-            //document.querySelectorAll('input').forEach((e) => { e.value = '' });
-            return false;
-        },2000);
-    }
+        })
 
     let obj = {
         email : '',
