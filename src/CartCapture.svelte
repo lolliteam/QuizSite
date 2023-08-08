@@ -10,13 +10,16 @@
     function formSubmit() {
         //document.querySelector('#submitForm3').click();
         MsCrmMkt.MsCrmFormLoader.sendFormCaptureToCrm(document.getElementById('fakeform3')).then(() => {
-            console.log(obj)
-            track_msdynmkt_testtrigger_090959945(); 
-            document.querySelectorAll('input').forEach((e) => { e.value = '' });
+            setTimeout(()=> {
+                track_msdynmkt_testtrigger_090959945(); 
+                document.querySelectorAll('input').forEach((e) => { e.value = '' });
+             },2000)
+            
         });
     }
 
     function track_msdynmkt_testtrigger_090959945() {
+        console.log('send email')
         window["msdynmkt"].setUser({ authId: obj.email });   // ID, e-mail or phone number - see instructions
         window["msdynmkt"].trackEvent({
             name: "msdynmkt_testtrigger_090959945", //Trigger title: Test trigger
