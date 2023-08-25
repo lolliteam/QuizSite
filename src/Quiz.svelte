@@ -96,4 +96,4 @@
 </Modal>
 {/if}
 
-<!-- <FakeTable /> -->
+<FakeTable />
