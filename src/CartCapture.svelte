@@ -10,21 +10,15 @@
     function formSubmit() {
         //document.querySelector('#submitForm3').click();
         MsCrmMkt.MsCrmFormLoader.sendFormCaptureToCrm(document.getElementById('fakeform3')).then(() => {
-            // setTimeout(()=> {
-            //     track_msdynmkt_testtrigger_090959945(); 
-            //     //document.querySelectorAll('input').forEach((e) => { e.value = '' });
-            //  },2000)
-            
+            console.log('Submission Complete')    
         });
     }
 
     window.addEventListener('beforeunload', (event) => {
     //window.addEventListener('unload', (event) => {
-    event.preventDefault();
-    
-    if(obj.email ) track_msdynmkt_testtrigger_090959945(); 
-
-    event.returnValue = '';
+        event.preventDefault();
+        if(obj.email ) track_msdynmkt_testtrigger_090959945(); 
+        event.returnValue = '';
     });
 
     function track_msdynmkt_testtrigger_090959945() {
