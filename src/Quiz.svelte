@@ -31,7 +31,7 @@
     }
 
     function forceSubmit() {
-        //document.querySelector('#submitForm').click();
+        document.querySelector('#submitForm').click();
         return true;
     }
 
