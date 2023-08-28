@@ -4,7 +4,7 @@
 
 <style>
     #fakeForm {
-        /* display: none; */
+        display: none;
     }
 </style>
 
