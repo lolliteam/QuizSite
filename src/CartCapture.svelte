@@ -29,16 +29,16 @@
             ingestionKey : "d526b9ddda844126893515798c13fc49-bc8ca8d2-f6f6-4e69-b6f8-59c361488449-7573",
             version: "1.0.0" ,
             properties: {
-            "productid" : obj.productid,
-            "lastname" : obj.lname,
-            "bindingid" : obj.bindingid,
-            "totalamount" : obj.totalamount,
-            "laststep" : obj.laststep,
-            "firstname" : obj.fname,
-            "date" : obj.date,
-            "url" : obj.url,
-            "state" :  obj.state,
-            "productname" : obj.productname,
+                "productid" : obj.productid,
+                "lastname" : obj.lname,
+                "bindingid" : obj.bindingid,
+                "totalamount" : obj.totalamount,
+                "laststep" : obj.laststep,
+                "firstname" : obj.fname,
+                "date" : obj.date,
+                "url" : obj.url,
+                "state" :  obj.state,
+                "productname" : obj.productname,
             }
         });
     }
