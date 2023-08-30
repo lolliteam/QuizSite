@@ -14,32 +14,30 @@
         });
     }
 
-    window.addEventListener('beforeunload', (event) => {
-    //window.addEventListener('unload', (event) => {
+    //window.addEventListener('beforeunload', (event) => {
+    window.addEventListener('unload', (event) => {
         event.preventDefault();
-        if(obj.email ) track_msdynmkt_testtrigger_090959945(); 
+        if(obj.email ) track_msdynmkt_abandoncarttrigger_142637121(); 
         event.returnValue = '';
     });
 
-    function track_msdynmkt_testtrigger_090959945() {
-        console.log('send email')
-        window["msdynmkt"].setUser({ authId: obj.email });   // ID, e-mail or phone number - see instructions
+    function track_msdynmkt_abandoncarttrigger_142637121() {
+        window["msdynmkt"].setUser({ authId: obj.email});   // ID, e-mail or phone number - see instructions
         window["msdynmkt"].trackEvent({
-            name: "msdynmkt_testtrigger_090959945", //Trigger title: Test trigger
-            ingestionKey : "d526b9ddda844126893515798c13fc49-bc8ca8d2-f6f6-4e69-b6f8-59c361488449-7573",
+            name: "msdynmkt_abandoncarttrigger_142637121", //Trigger title: Abandon Cart Trigger
+            ingestionKey : "c5eb70d46f704ec2a29bd75d30423e1a-2b4924c6-64f1-4752-b2b7-caf7ee263843-7455",
             version: "1.0.0" ,
-            properties: {
-                "productid" : obj.productid,
-                "lastname" : obj.lname,
-                "bindingid" : obj.bindingid,
-                "totalamount" : obj.totalamount,
-                "laststep" : obj.laststep,
-                "firstname" : obj.fname,
-                "date" : obj.date,
-                "url" : obj.url,
-                "state" :  obj.state,
-                "productname" : obj.productname,
-            }
+        properties: {
+         "date" : obj.date,
+         "firstname" : obj.fname,
+         "lastname" : obj.lname,
+         "laststep" : obj.laststep,
+         "productid" : obj.productid,
+         "productname" : obj.productname,
+         "state" : obj.state,
+         "totalamount" : obj.totalamount,
+         "bindingid" : obj.bindingid
+        }
         });
     }
 
@@ -53,7 +51,7 @@
         productname : '',
         state : '',
         totalamount : '',
-        url : '',
+        // url : '',
         bindingid : '',
     }
 </script>
@@ -116,7 +114,7 @@
     
     <label for="url">URL:</label>
     <input type="text" name="url" placeholder="url" id="url" bind:value={obj.url} />
-    
+     
     <label for="bindingid">Binding ID:</label>
     <input type="text" name="bindingid" placeholder="bindingid" id="bindingid" bind:value={obj.bindingid}  />
 

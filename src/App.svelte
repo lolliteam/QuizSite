@@ -49,13 +49,13 @@
 
 <Router {url}>
 	<nav>
-		<Link to="/quiz">
-			<img id="quiz" class="cardActive" on:click={() => flipIt(event)} alt="Quiz" data-src="https://www.clker.com/cliparts/j/i/d/Z/7/l/quiz-2-hi.png" src="https://sweetclipart.com/multisite/sweetclipart/files/check_mark_green.png" />
-			<label for="quiz">Form Capture</label>
-		</Link>
-		<Link to="/cartcapture">
-			<img id="cartcapture"  on:click={() => flipIt(event)} alt="cartcapture" data-src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532323sy0um.png" src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532323sy0um.png" />
+		<Link to="/">
+			<img id="cartcapture"  class="cardActive" on:click={() => flipIt(event)} alt="cartcapture" data-src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532323sy0um.png" src="https://sweetclipart.com/multisite/sweetclipart/files/check_mark_green.png" />
 			<label for="cartcapture">Form Capture + Cart Script</label>
+		</Link>
+		<Link to="/quiz">
+			<img id="quiz" on:click={() => flipIt(event)} alt="Quiz" data-src="https://www.clker.com/cliparts/j/i/d/Z/7/l/quiz-2-hi.png" src="https://www.clker.com/cliparts/j/i/d/Z/7/l/quiz-2-hi.png" />
+			<label for="quiz">Form Capture</label>
 		</Link>
 		<Link to="/cart">
 			<img id="cart" on:click={() => flipIt(event)} alt="Cart" data-src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532323sy0um.png" src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532323sy0um.png" />
@@ -68,9 +68,10 @@
 		</Link> -->
 	</nav>
 	<div>
-		<Route path="/"><Quiz /></Route>
+		<Route path="/"><CartCapture /></Route>
 		<Route path="/cart" component={Cart} />
 		<Route path="/video" component={Video} />
 		<Route path="/cartcapture" component={CartCapture} />
+		<Route path="/quiz" component={Quiz} />
 	</div>
 </Router>
